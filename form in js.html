@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+<style>
+form{
+width: 400px;
+height: 340px;
+border: 1px solid white;
+background-color: palegoldenrod;
+margin: auto;
+justify-content: center;
+}
+.dark-mode{
+background-color: black;
+color: white;
+}
+h1{
+text-align: center;
+}
+#in1{
+width: 380px; 
+height: 30px; 
+border: 1px solid black; 
+text-align: center;
+outline: none;
+}
+#in2{
+width: 380px; 
+height: 30px; 
+border: 1px solid black; 
+text-align: center;
+outline: none;
+}
+#in3{
+width: 380px; 
+height: 30px; 
+border: 1px solid black; 
+text-align: center;
+outline: none;
+}
+#in4{
+width: 380px; 
+height: 30px; 
+border: 1px solid black; 
+text-align: center;
+outline: none;
+}
+</style>
+</head>
+<body><br><br>
+<button onclick="Change()" id="but">day/night</button>
+<form action="./action.page_php">
+<h1><u>FORM</u></h1><br>
+<input type="text" placeholder="Username" id="in1"><br><br>
+<input type="password" placeholder="Password" id="in2"><br><br>
+<input type="password" placeholder="ConfirmPassword" id="in3"><br><br>
+<input type="email" id="in4" placeholder="email"><br><br>
+<button class="btn-success" id="bot" onclick="display()">REGISTER</button>
+</form>
+<script>
+let in1 = document.getElementById("in1").value;
+let in2 = document.getElementById("in2").value;
+let in3 = document.getElementById("in3").value;
+let in4 = document.getElementById("in4").value;
+function clearEditInput(){
+in1.value = "";
+in2.value = "";
+in3.value = "";
+in4.value = "";
+}
+function display(){
+if(in2 == in3 || in1 !== Number){
+alert("completed")
+clearEditInput()
+}
+else{
+alert("error")
+clearEditInput()
+}
+}
+// function Change() {
+// var element = document.body
+// element.classList.toggle("dark-mode")        
+// }
+const body = document.querySelector("body") 
+const but = documnet.getElementById("but")
+body.style.backgroundColor = "black";
+body.style.color = "white";
+but.style.backgroundColor = "white";
+but.style.color = "black";
+function Change(){
+if(body.style.backgroundColor === "black"){
+body.syle.backgroundColor === "white";
+body.style.color === "black" 
+but.style.backgroundColor === "white"
+but.syle.color === "black"
+}
+else{
+body.syle.backgroundColor === "black";
+body.style.color === "white" 
+but.style.backgroundColor === "black"
+but.syle.color === "white"
+}
+}
+</script>
+</body>
+</html>
